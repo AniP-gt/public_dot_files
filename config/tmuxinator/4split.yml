@@ -1,0 +1,6 @@
+name: 4split
+root: ~
+
+windows:
+  - window1:
+      layout: tiled
