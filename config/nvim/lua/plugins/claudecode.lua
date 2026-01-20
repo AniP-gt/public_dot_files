@@ -1,0 +1,117 @@
+return {
+  --   -- Claude Code integration for Neovim
+  --   {
+  --     "coder/claudecode.nvim",
+  --     dependencies = {
+  --       "nvim-lua/plenary.nvim",
+  --       "MunifTanjim/nui.nvim",
+  --     },
+  --     cmd = { "ClaudeCode" },
+  --     lazy = true,
+  --     opts = {
+  --       -- API configuration (will use ANTHROPIC_API_KEY env var by default)
+  --       api_key = vim.env.ANTHROPIC_API_KEY,
+  --
+  --       -- Model selection
+  --       model = "claude-3-5-sonnet-20241022",
+  --
+  --       -- UI configuration
+  --       ui = {
+  --         width = 0.8,
+  --         height = 0.8,
+  --         border = "rounded",
+  --       },
+  --
+  --       -- Diff display options
+  --       diff_opts = {
+  --         auto_close_on_accept = true,
+  --         vertical_split = false,  -- Use horizontal split for better diff viewing
+  --         open_in_current_tab = true,
+  --       },
+  --
+  --       -- Features
+  --       features = {
+  --         -- Enable code suggestions
+  --         suggestions = true,
+  --         -- Enable code explanations
+  --         explanations = true,
+  --         -- Enable refactoring suggestions
+  --         refactoring = true,
+  --         -- Enable test generation
+  --         test_generation = true,
+  --       },
+  --
+  --       -- Context settings
+  --       context = {
+  --         -- Include current file in context
+  --         include_current_file = true,
+  --         -- Include visible buffers
+  --         include_visible_buffers = false,
+  --         -- Max lines of context
+  --         max_lines = 500,
+  --       },
+  --     },
+  --     keys = {
+  --       -- Main Claude Code command
+  --       { "<leader>ai", "<cmd>ClaudeCode<cr>", desc = "Open Claude Code" },
+  --
+  --       -- Ask about selected code
+  --       { "<leader>aa", function()
+  --         require("claudecode").ask_about_selection()
+  --       end, mode = { "v" }, desc = "Ask Claude about selection" },
+  --
+  --       -- Explain code
+  --       { "<leader>ae", function()
+  --         require("claudecode").explain_code()
+  --       end, mode = { "n", "v" }, desc = "Explain code" },
+  --
+  --       -- Refactor code
+  --       { "<leader>ar", function()
+  --         require("claudecode").refactor_code()
+  --       end, mode = { "n", "v" }, desc = "Refactor code with Claude" },
+  --
+  --       -- Generate tests
+  --       { "<leader>at", function()
+  --         require("claudecode").generate_tests()
+  --       end, mode = { "n", "v" }, desc = "Generate tests with Claude" },
+  --
+  --       -- Fix errors
+  --       { "<leader>af", function()
+  --         require("claudecode").fix_errors()
+  --       end, desc = "Fix errors with Claude" },
+  --
+  --       -- Generate documentation
+  --       { "<leader>ad", function()
+  --         require("claudecode").generate_docs()
+  --       end, mode = { "n", "v" }, desc = "Generate docs with Claude" },
+  --
+  --       -- Code review
+  --       { "<leader>av", function()
+  --         require("claudecode").review_code()
+  --       end, mode = { "n", "v" }, desc = "Review code with Claude" },
+  --
+  --       -- Toggle Claude Code window
+  --       { "<leader>ac", function()
+  --         require("claudecode").toggle()
+  --       end, desc = "Toggle Claude Code window" },
+  --
+  --       -- Clear conversation
+  --       { "<leader>ax", function()
+  --         require("claudecode").clear_conversation()
+  --       end, desc = "Clear Claude conversation" },
+  --     },
+  --     config = function(_, opts)
+  --       require("claudecode").setup(opts)
+  --
+  --       -- Optional: Set up autocommands
+  --       vim.api.nvim_create_autocmd("FileType", {
+  --         pattern = { "javascript", "typescript", "python", "ruby", "go", "rust" },
+  --         callback = function()
+  --           -- Enable inline suggestions for supported file types
+  --           vim.b.claudecode_suggestions_enabled = true
+  --         end,
+  --       })
+  --     end,
+  --   },
+}
+
