@@ -1,0 +1,31 @@
+gui:
+  # スクロールの設定
+  scrollHeight: 2
+  scrollPastBottom: true
+  mouseEvents: true
+  skipDiscardChangeWarning: false
+  skipStashWarning: false
+  sidePanelWidth: 0.3333
+  expandFocusedSidePanel: false
+  mainPanelSplitMode: "flexible"
+  # アイコン表示
+  nerdFontsVersion: "3"
+  theme:
+    lightTheme: false
+os:
+  # エディタ設定（neovim-remoteを使用）
+  editPreset: "nvim-remote"
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --side-by-side --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+  branchLogCmd: git log --graph --color=always --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#dd4814)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n' {{branchName}} --
+  log:
+    showWholeGraph: true
+  allBranchesLogCmds:
+    - git log --graph --color=always --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#dd4814)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n' --
+customCommands:
+  - key: "S"
+    context: "files"
+    description: "Stash all changes including untracked files"
+    command: "git stash -u"
