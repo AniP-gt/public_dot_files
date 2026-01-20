@@ -1,0 +1,68 @@
+# Generated from WezTerm config (partial mapping)
+# Font
+font-family = "JetBrains Mono"
+font-family = "JetBrains Mono Nerd Font"
+font-size = 16
+font-thicken=true
+# 起動時にMAX表示にする
+maximize = true
+
+# バックスラッシュ対応
+keybind = ¥=text:\\
+
+# MacOS限定
+# タイトルバーの非表示
+macos-titlebar-style = tabs
+# 右上のウィンドウボタン非表示
+macos-window-buttons="hidden"
+# optionキーをaltとして扱う
+macos-option-as-alt = true
+macos-non-native-fullscreen = true
+# tabの新規作成位置を最後にする
+window-new-tab-position=end
+
+# Colors
+background = #141414
+foreground = #f9f7ef
+cursor-color = #f1d560
+selection-foreground = #f9f7ef
+selection-background = #196a89
+
+# ANSI palette (0-7)
+palette = 0=#444844
+palette = 1=#d95673
+palette = 2=#8cc06d
+palette = 3=#eebe36
+palette = 4=#5caadb
+palette = 5=#b594ce
+palette = 6=#44a9ba
+palette = 7=#fbfaf7
+# Brights (8-15)
+palette = 8=#6c6d6b
+palette = 9=#dba1b4
+palette = 10=#898e38
+palette = 11=#8a6b3c
+palette = 12=#8399c9
+palette = 13=#887a9e
+palette = 14=#87c6d3
+palette = 15=#bfc1bb
+
+# Window appearance
+background-opacity = 0.7
+background-blur = 10
+
+# Scrollback
+scrollback-limit = 100000
+
+# Keybindings: mapped representative bindings from wezterm
+# Copy / Paste (Cmd on macOS maps to 'super')
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
+# Tabs / splits
+keybind = super+t=new_tab
+# CMD+d -> split horizontal (below)
+keybind = super+d=new_split:down
+# CMD+SHIFT+d -> split vertical (right)
+keybind = super+shift+d=new_split:right
+
