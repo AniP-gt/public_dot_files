@@ -1,0 +1,12 @@
+# bat configuration
+# Set theme to popular dark theme
+--theme="Dracula"
+
+# Show line numbers
+--style="numbers,changes,header"
+
+# Use less with -RFX flags:
+# -R: Display colors correctly
+# -F: Quit if content fits on one screen
+# -X: Don't clear screen on exit (like 'more')
+--pager="less -RFX"
