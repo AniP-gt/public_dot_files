@@ -1,6 +1,6 @@
 local workspace_name = {
-	NAME_1 = "session1",
-	NAME_2 = "session2",
+	NAME_1 = "1_Main",
+	NAME_2 = "2_Project",
 	NAME_3 = "session3",
 	NAME_4 = "session4",
 	NAME_5 = "session5",

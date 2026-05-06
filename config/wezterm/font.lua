@@ -5,7 +5,7 @@ local M = {}
 function M.setup(config)
 	-- メインフォントの設定
 	-- MesloLGS NFをボールドで使用（Powerlineやアイコンフォントに対応）
-	config.font = wezterm.font("JetBrains Mono", { weight = "Bold", italic = false })
+	config.font = wezterm.font("JetBrainsMonoNL Nerd Font", { weight = "Bold", italic = false })
 
 	-- フォントサイズの設定
 	config.font_size = 15
@@ -17,8 +17,7 @@ function M.setup(config)
 			intensity = "Normal",
 			italic = false,
 			font = wezterm.font_with_fallback({
-				"JetBrains Mono", -- プライマリフォント（Nerd Font対応）
-				"JetBrains Mono Nerd Font", -- フォールバックフォント
+				"JetBrainsMonoNL Nerd Font", -- プライマリフォント（Nerd Font対応）
 			}, { weight = "Bold" }),
 		},
 	}
